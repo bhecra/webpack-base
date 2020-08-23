@@ -21,13 +21,8 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.css$/i,
-        exclude: /styles\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /styles\.css$/,
-        use: [MiniCssExtracPlugin.loader, "css-loader"],
+        test: /\.scss$/,
+        use: [MiniCssExtracPlugin.loader, "css-loader","sass-loader"],
       },
       {
         test: /\.html$/i,

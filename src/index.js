@@ -1,4 +1,4 @@
 import { component } from './js/function';
-import './styles.css';
+import './styles.scss';
 
 document.body.appendChild(component());

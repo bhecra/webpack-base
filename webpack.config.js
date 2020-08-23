@@ -12,13 +12,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.scss$/i,
         exclude: /styles\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader","sass-loader"],
       },
       {
-        test: /styles\.css$/,
-        use: [MiniCssExtracPlugin.loader, "css-loader"],
+        test: /styles\.scss$/,
+        use: [MiniCssExtracPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.html$/i,
@@ -58,6 +58,5 @@ module.exports = {
         },
       ],
     }),
-    new CleanWebpackPlugin(),
   ],
 };

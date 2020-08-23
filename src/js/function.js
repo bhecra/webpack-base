@@ -1,4 +1,4 @@
-import '../css/function.css';
+import '../css/function.scss';
 
 export const component = function component() {
     const element = document.createElement('h1');
