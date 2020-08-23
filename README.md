@@ -8,6 +8,10 @@ Recuerden reconstruir los módulos de Node
 ```
 npm install
 ```
+para correr iniciar 
+```
+npm start
+```
 
 para construir el build
 ```
