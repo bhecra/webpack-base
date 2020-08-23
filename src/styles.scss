@@ -1,5 +1,9 @@
 /* Estos son estilos del main */
-$main-color: red;
+$main-color: white;
 html, body {
     background-color: $main-color;
+}
+
+img {
+    width: 100%;
 }
