@@ -1,4 +1,4 @@
-# Webpack Starter
+# Webpack Starter for Typescript
 
 Este es un proyecto inicial para empezar una app utilizando webpack
 
