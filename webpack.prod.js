@@ -13,8 +13,14 @@ module.exports = {
   output: {
     filename: "main.[contentHash].js",
   },
+  entry: "./src/index.ts",
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -44,6 +50,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebPackPlugin({

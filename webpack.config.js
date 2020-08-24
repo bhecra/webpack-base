@@ -9,12 +9,18 @@ module.exports = {
   optimization: {
     minimizer: [new OptimizeCssAssetsPlugin()],
   },
+  entry: "./src/index.ts",
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+      {
         test: /\.scss$/i,
         exclude: /styles\.css$/i,
-        use: ["style-loader", "css-loader","sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /styles\.scss$/,
@@ -40,6 +46,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebPackPlugin({
